@@ -1,0 +1,24 @@
+create database crud;
+GRANT ALL ON crud.* TO 'fred'@'localhost' IDENTIFIED BY 'zap';
+GRANT ALL ON crud.* TO 'fred'@'127.0.0.1' IDENTIFIED BY 'zap';
+
+
+
+
+CREATE TABLE `autos` (
+  `auto_id` int(10) UNSIGNED NOT NULL,
+  `make` varchar(128) DEFAULT NULL,
+  `model` varchar(255) DEFAULT NULL,
+  `year` int(11) DEFAULT NULL,
+  `mileage` int(11) DEFAULT NULL
+);
+
+
+
+ALTER TABLE `autos`
+  ADD PRIMARY KEY (`auto_id`);
+
+
+
+ALTER TABLE `autos`
+  MODIFY `auto_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
